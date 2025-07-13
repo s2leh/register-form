@@ -9,7 +9,7 @@ $result = $conn->query("SELECT * FROM clients");
 <html>
 <head>
     <title>User Registration Form</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
