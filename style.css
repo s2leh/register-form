@@ -1,0 +1,241 @@
+/* === Fonts and Base === */
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #333824;
+    color: #e8e4cf;
+    margin: 0;
+    padding: 40px 20px;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* === Layout Container === */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* === Headings === */
+h2 {
+    color: #f4ecd8;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background: #876809;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #5d5a3a;
+    margin: 50px auto;
+    max-width: 800px;
+}
+
+/* === Form Container === */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* === Main Registration Form Only === */
+.main-form {
+    background: linear-gradient(to bottom, #3d3f2b, #2f321f);
+    padding: 40px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid #5d5a3a;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.main-form:hover {
+    transform: translateY(-3px);
+}
+
+/* === Form Rows === */
+.form-row {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-row:last-child {
+    margin-bottom: 0;
+}
+
+.submit-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+/* === Form Fields === */
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #fdf6d8;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #6e6a47;
+    border-radius: 5px;
+    background-color: #eae2c8;
+    color: #333824;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #876809;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(135, 104, 9, 0.2);
+}
+
+/* === Buttons === */
+input[type="submit"] {
+    background-color: #876809;
+    color: #fff8dc;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+    background-color: #6f5906;
+    transform: translateY(-2px);
+}
+
+/* === Table Section === */
+.table-container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    font-size: 1.1rem;
+    border-collapse: collapse;
+    background: #3c3f2d;
+    color: #f4ecd8;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #5d5a3a;
+}
+
+th {
+    background-color: #876809;
+    color: #fff8dc;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+tr:hover {
+    background-color: #4a4e38 !important;
+}
+
+/* === Status Colors === */
+.status-active {
+    color: #b6f2a1;
+    font-weight: bold;
+}
+
+.status-inactive {
+    color: #e49b9b;
+    font-weight: bold;
+}
+
+/* === Toggle Button === */
+.toggle-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    background-color: #876809;
+    color: #fff8dc;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.toggle-btn:hover {
+    background-color: #6f5906;
+    transform: translateY(-1px);
+}
+
+/* === No Records Message === */
+.no-records {
+    text-align: center;
+    padding: 30px;
+    font-style: italic;
+    color: #a8a58b;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+    
+    .main-form {
+        padding: 20px;
+    }
+    
+    th, td {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+}
